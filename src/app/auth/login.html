@@ -1,0 +1,43 @@
+<md-content flex id="content" layout="row" layout-align="center center">
+  <ir-background ir-background-image="assets/img/toyo.jpg"></ir-background>
+
+  <md-progress-linear class="ir-progress-linear" ng-show="vm.loginStatus" md-mode="indeterminate"></md-progress-linear>
+ <section layout="column" flex layout-align="center center" class="login">
+  <md-card class="ir-auth md-whiteframe-41dp" layout="column" flex="100" flex-sm="60" flex-gt-sm="40" layout-padding>
+    <md-toolbar>
+                <div layout="column" layout-padding layout-align="center center">
+                    <div>
+                        <md-icon class="logo">
+                        <img src="assets/img/ClearlanceLoge.png" with>
+                      </md-icon>
+                    </div>
+                    <div class="md-headline md-padding">Accelerate Practical Prototype Solutions</div>
+                </div>
+            </md-toolbar>
+   <md-card-content>
+      <form name="loginForm" ng-submit="vm.login(vm.user)">
+        <md-input-container class="md-block">
+          <label>User Name</label>
+          <input name="email" ng-model="vm.user.email" autofocus required>
+          <div ng-messages="loginForm.email.$error">
+            <div ng-message="required">User name is required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input name="password" ng-model="vm.user.password" type="password" required>
+          <div ng-messages="loginForm.password.$error">
+            <div ng-message="required">Password is required</div>
+          </div>
+        </md-input-container>
+        <!-- TODO login should work on enter -->
+        <section layout="row" layout-align="center center">
+          <a href="#register">Need an account?</a>
+          <md-button class="md-raised md-primary ir-auth__submit" type="submit" ng-disabled="loginForm.$invalid">Login</md-button>
+        </section>
+      </form>
+    </md-card-content>
+  </md-card>
+</section>
+
+</md-content>

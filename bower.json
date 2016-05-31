@@ -1,0 +1,36 @@
+{
+  "name": "angular-material-dashboard",
+  "description": "Dashboard using Angular Material",
+  "authors": [
+    "Ives Ebneter"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~1.1.0",
+    "firebase": "~2.4.0",
+    "angularfire": "~1.2.0",
+    "angular-route": "~1.5.3",
+    "material-design-icons": "~2.1.3",
+    "js-md5": "~2.3.0",
+    "dragular": "~4.0.1",
+    "angular-messages": "~1.5.3"
+  },
+  "overrides": {
+    "dragular": {
+      "main": "dist/dragular.js"
+    },
+    "angular-material": {
+      "main": ["modules/scss/angular-material.scss", "angular-material.js"]
+    },
+    "material-design-icons": {
+      "ignore": true
+    }
+  }
+}

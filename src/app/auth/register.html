@@ -1,0 +1,32 @@
+<md-content flex id="content" layout="row" layout-align="center center">
+  <ir-background ir-background-image="assets/img/ClearlanceLoge.png"></ir-background>
+  <md-progress-linear class="ir-progress-linear" ng-show="vm.loginStatus" md-mode="indeterminate"></md-progress-linear>
+
+  <md-card class="ir-auth md-whiteframe-z1" layout="column" flex="100" flex-sm="60" flex-gt-sm="40" layout-padding>
+    <md-card-content>
+      <form name="registerForm" ng-submit="vm.register(vm.user)">
+        <md-input-container class="md-block">
+          <label>User Name</label>
+          <input name="email" type="email" ng-model="vm.user.email" autofocus required>
+          <div ng-messages="registerForm.email.$error">
+            <div ng-message-exp="['required', 'email']">A valid email address is required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <!-- TODO Repeat password -->
+          <input name="password" type="password" ng-model="vm.user.password" multiple minlength="6" required>
+          <div ng-messages="registerForm.password.$error">
+            <div ng-message-exp="['required', 'minlength']">Please provide a password that consist of min. 6 characters</div>
+          </div>
+        </md-input-container>
+        <!-- TODO login should work on enter -->
+        <section layout="row" layout-align="center center">
+          <a href="#login">Have already an account?</a>
+          <md-button class="md-raised md-primary ir-auth__submit" type="submit" ng-disabled="registerForm.$invalid">Register</md-button>
+        </section>
+      </form>
+    </md-card-content>
+  </md-card>
+
+</md-content>

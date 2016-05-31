@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Angular Material Dashboard Demo">
+  <title>Angular Material Dashboard</title>
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="assets/img/ClearlanceLoge.png" sizes="196x196">
+ 
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Montserrat+Alternates' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="assets/styles/css/main.css">
+  <style>[ng-cloak] { display: none; }</style>
+</head>
+<body ng-app="app" layout="column" ng-controller="GlobalController as global">
+
+<ir-toolbar></ir-toolbar>
+
+<div flex layout="row">
+
+  <ir-sidenav></ir-sidenav>
+
+  <ng-view flex layout="row"></ng-view>
+
+</div>
+
+<!-- Third-party JS -->
+<script src="assets/js/vendor/angular.js"></script>
+<script src="assets/js/vendor/angular-route.js"></script>
+<script src="assets/js/vendor/angular-messages.js"></script>
+<script src="assets/js/vendor/angular-animate.js"></script>
+<script src="assets/js/vendor/angular-aria.js"></script>
+<script src="assets/js/vendor/angular-material.js"></script>
+<script src="assets/js/vendor/firebase.js"></script>
+<script src="assets/js/vendor/angularfire.js"></script>
+<script src="assets/js/vendor/md5.js"></script>
+<script src="assets/js/vendor/dragular.js"></script>
+
+<!-- Main App Module -->
+<script src="app/app.module.js"></script>
+
+<!-- Core Module -->
+<script src="app/core/core.module.js"></script>
+<script src="app/core/constants.js"></script>
+<script src="app/core/firebase-data.service.js"></script>
+<script src="app/core/loading-indicator.service.js"></script>
+
+<!-- Auth Module -->
+<script src="app/auth/auth.module.js"></script>
+<script src="app/auth/config.route.js"></script>
+<script src="app/auth/auth.service.js"></script>
+<script src="app/auth/auth.controller.js"></script>
+
+<!-- Global Module -->
+<script src="app/global/global.module.js"></script>
+<script src="app/global/global.controller.js"></script>
+<script src="app/core/background.directive.js"></script>
+<script src="app/core/avatar.directive.js"></script>
+
+<!-- Toolbar Module -->
+<script src="app/toolbar/toolbar.module.js"></script>
+<script src="app/toolbar/toolbar.controller.js"></script>
+<script src="app/toolbar/toolbar.directive.js"></script>
+
+<!-- Sidenav Module -->
+<script src="app/sidenav/sidenav.module.js"></script>
+<script src="app/sidenav/sidenav.directive.js"></script>
+
+<!-- Dashboard Module -->
+<script src="app/dashboard/dashboard.module.js"></script>
+<script src="app/dashboard/config.route.js"></script>
+<script src="app/dashboard/dashboard.controller.js"></script>
+
+<!-- Cards Module -->
+<script src="app/cards/cards.module.js"></script>
+<script src="app/cards/cards.service.js"></script>
+<script src="app/cards/cards.directive.js"></script>
+
+<!-- Card Task Module -->
+<script src="app/card-task/card-task.module.js"></script>
+<script src="app/card-task/card-task.directive.js"></script>
+<script src="app/card-task/card-task.filter-order.js"></script>
+
+<!-- Card Weather Module -->
+<script src="app/card-weather/card-weather.module.js"></script>
+<script src="app/card-weather/card-weather.directive.js"></script>
+
+</body>
+</html>
